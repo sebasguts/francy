@@ -128,6 +128,14 @@ export default class Graph extends Renderer {
       .attr('class', d => 'francy-node' + (d.highlight ? ' francy-highlight' : '') + (Object.values(d.menus).length ? ' francy-context' : ''))
       .attr('id', d => d.id);
 
+    node.append('title').text(d => {
+      if (d.messages && Object.values(d.messages).length) {
+        return Object.keys(d.messages).map(function(key) {
+          return `${d.messages[key].title}: ${d.messages[key].text}`;
+        }).join('\n');
+      }
+    });
+
     if (json.canvas.graph.drag) {
       node.call(d3.drag()
         .on('start', dragstarted)
@@ -136,6 +144,7 @@ export default class Graph extends Renderer {
     }
 
     node.on('contextmenu', function(d) {
+        d3.event.preventDefault();
         // default, build context menu
         contextMenu.render(d);
         // any callbacks will be handled here
@@ -151,13 +160,13 @@ export default class Graph extends Renderer {
         // any callbacks will be handled here
         executeCallback.call(this, d, 'dblclick');
       })
-      .on("mouseover", d => {
+      .on("mouseover", () => {
         // default, show tooltip
-        tooltip.render(d.messages);
+        //tooltip.render(d.messages);
       })
       .on("mouseout", () => {
         // default, hide tooltip
-        tooltip.unrender();
+        //tooltip.unrender();
       });
 
     var labelGroup = svg.selectAll('.francy-labels');

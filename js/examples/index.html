@@ -1,9 +1,12 @@
 <html>
 <head>
-  <meta charset="utf-8" content="text/html" property="GAP,francy,d3.v4">
+  <meta charset="UTF-8">
+  <meta name="description" content="Francy">
+  <meta name="keywords" content="GAP,francy,d3.v4">
+  <meta name="author" content="Manuel Martins">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="../dist/francy/css/style.css">
   <script src="../dist/francy/lib/d3.min.js"></script>
-  <script src="../dist/francy/lib/underscore-min.js"></script>
   <script src="../dist/francy/browser/francy.bundle.js"></script>
   <title>Francy</title>
 </head>
@@ -17,7 +20,7 @@
   }
   
   var francy = new Francy({verbose: true, appendTo: 'body', callbackHandler: trigger});
-
+/*
   d3.json("json1.json", function (error, json) {
     var element = francy.render(json);
     document.getElementById('francy').append(element);
@@ -37,12 +40,12 @@
     var element = francy.render(json);
     document.getElementById('francy').append(element);
   });
-  
+  */
   d3.json("json4.json", function (error, json) {
     var element = francy.render(json);
     document.getElementById('francy').append(element);
   });
-
+/*
   d3.json("json5.json", function (error, json) {
     var element = francy.render(json);
     document.getElementById('francy').append(element);
@@ -62,7 +65,7 @@
     var element = francy.render(json);
     document.getElementById('francy').append(element);
   });
-  
+  */
   d3.json("json9.json", function (error, json) {
     var element = francy.render(json);
     document.getElementById('francy').append(element);
@@ -72,11 +75,11 @@
        });
     }, 10000);
   });
-  
+  /*
   d3.json("json10.json", function (error, json) {
     var element = francy.render(json);
     document.getElementById('francy').append(element);
-  });
+  });*/
 
 </script>
 </body>

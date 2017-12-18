@@ -40,7 +40,7 @@ export default class Tooltip extends Renderer {
     });
 
     // show tooltip
-    this.tooltip.style('display', 'block');
+    this.tooltip.style('display', 'block').attr('width', '100%').attr('height', '500px');
   }
 
   unrender() {

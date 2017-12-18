@@ -68,15 +68,15 @@ export default class RequiredArgsModal extends Renderer {
         overlay.remove();
         modal.remove();
         holder.remove();
-        event.preventDefault();
       }
+      d3.event.preventDefault();
       return false;
     });
-    footer.append('button').text('Cancel').on('click', () => {
-      event.preventDefault();
+    footer.append('button').text('Cancel').on('click', function() {
       overlay.remove();
       modal.remove();
       holder.remove();
+      d3.event.preventDefault();
       return false;
     });
 

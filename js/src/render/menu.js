@@ -1,6 +1,7 @@
 import Renderer from './renderer';
 import Callback from './callback';
 
+// TODO replace foreignObject http://bl.ocks.org/jakosz/ce1e63d5149f64ac7ee9
 export default class Menu extends Renderer {
 
   constructor({ verbose = false, appendTo, callbackHandler }) {
@@ -31,6 +32,9 @@ export default class Menu extends Renderer {
       },
       hasNext: function() {
         return nextIndex < array.length;
+      },
+      count: function() {
+        return array.length;
       }
     };
   }

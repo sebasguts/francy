@@ -106,10 +106,6 @@ width:100%
 width:100%!important
 }
 
-.francy-context-menu-holder {
-display:none
-}
-
 .francy-nodes,.francy-bars,.francy-lines,.francy-labels,.francy-scatters {
 cursor:pointer
 }
@@ -186,7 +182,7 @@ cursor:move
 
 .francy text {
 fill:#000;
-font-size:12px
+font-size:13px
 }
 
 .francy ul {
@@ -215,31 +211,29 @@ font-weight:700;
 text-overflow:ellipsis
 }
 
-.francy-context-menu {
-background:#f6f6f6;
-color:#333;
-min-width:150px;
-border:1px solid #cfcfcf;
+.francy-context-menu,
+.francy-main-menu {
 z-index:500;
-box-shadow:5px 5px 5px grey
+fill:#f6f6f6
 }
 
-.francy-context-menu ul {
-list-style-type:none;
-margin:0;
-padding:0;
+.francy-context-menu .francy-menu-entry,
+.francy-main-menu .francy-menu-entry {
 cursor:pointer
 }
 
-.francy-context-menu ul li a {
-background:#f6f6f6;
-display:block;
-padding:5px 10px;
-text-decoration:none
+.francy-context-menu .francy-menu-border, 
+.francy-main-menu .francy-menu-border {
+stroke:#cfcfcf
+}
+.francy-context-menu .francy-menu-entry rect, 
+.francy-main-menu .francy-menu-entry rect {
+fill:#f6f6f6
 }
 
-.francy-context-menu ul li a:hover {
-background-color:#ededed
+.francy-context-menu .francy-menu-entry.francy-menu-entry-selected rect, 
+.francy-main-menu .francy-menu-entry.francy-menu-entry-selected rect {
+fill:#ededed
 }
 
 .francy-table {
@@ -316,14 +310,6 @@ margin-left:5px
 }
 
 .francy-alert {
-width:fit-content;
-min-width:250px;
-padding:.75rem 1.25rem;
-margin:.2rem 0 0 .2rem;
-border:1px solid transparent;
-border-radius:.25rem;
-cursor:pointer;
-display:inline-block
 }
 
 .francy-alert:hover span:last-of-type {
@@ -333,32 +319,32 @@ float:right
 
 .francy-alert.alert-info {
 color:#0c5460;
-background-color:#d1ecf1;
-border-color:#bee5eb
+fill:#d1ecf1;
+stroke:#bee5eb
 }
 
 .francy-alert.alert-error {
 color:#721c24;
-background-color:#f8d7da;
-border-color:#f5c6cb
+fill:#f8d7da;
+stroke:#f5c6cb
 }
 
 .francy-alert.alert-success {
 color:#155724;
-background-color:#d4edda;
-border-color:#c3e6cb
+fill:#d4edda;
+stroke:#c3e6cb
 }
 
 .francy-alert.alert-default {
 color:#1b1e21;
-background-color:#f6f6f6;
-border-color:#cfcfcf
+fill:#f6f6f6;
+stroke:#cfcfcf
 }
 
 .francy-alert.alert-warning {
 color: #856404;
-background-color: #fff3cd;
-border-color: #ffeeba
+fill: #fff3cd;
+stroke: #ffeeba
 }
 
 .strong {

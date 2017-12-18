@@ -211,11 +211,15 @@ function(canvas)
     "<!DOCTYPE html>\n\
     <html>\n\
       <head>\n\
-        <meta charset=\"utf-8\" content=\"text/html\" property=\"GAP,francy,d3.v4\"></meta>\n\
+        <meta charset=\"UTF-8\">\n\
+        <meta name=\"description\" content=\"", canvas!.title , "\">\n\
+        <meta name=\"keywords\" content=\"GAP,francy,d3.v4\">\n\
+        <meta name=\"author\" content=\"Manuel Martins\">\n\
+        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n\
         <link rel=\"stylesheet\" type=\"text/css\" href=\"https://cdn.rawgit.com/mcmartins/francy/develop/js/dist/francy/css/style.css\"></link>\n\
         <script src=\"https://cdn.rawgit.com/mcmartins/francy/develop/js/dist/francy/lib/d3.min.js\"></script>\n\
         <script src=\"https://cdn.rawgit.com/mcmartins/francy/develop/js/dist/francy/browser/francy.bundle.js\"></script>\n\
-        <title>Francy</title>\n\
+        <title>Francy - ", canvas!.title , "</title>\n\
       </head>\n\
       <body>\n\
         <div id=\"francy\"></div>\n\
@@ -235,7 +239,7 @@ function(canvas)
         Exec("start firefox ",name);
     fi;
     if ARCH_IS_UNIX() then
-        Exec("cat ",name);
+        Exec("open ",name);
     fi;
 
     return page;
