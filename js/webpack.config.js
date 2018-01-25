@@ -1,3 +1,5 @@
+//let UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+
 module.exports = {
   entry: './src/francy.js',
   output: {
@@ -6,10 +8,13 @@ module.exports = {
   },
   devtool: 'inline-source-map',
   module: {
-    loaders: [
-      {
-        loader: 'babel-loader'
-      }
-    ]
-  }
+    loaders: [{
+      loader: 'babel-loader'
+    }]
+  },
+  plugins: [
+    //new UglifyJsPlugin({
+    //  exclude: /.*test.js/
+    //})
+  ]
 };
