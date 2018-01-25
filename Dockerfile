@@ -1,4 +1,4 @@
-FROM sebasguts/gapbinder:20171020
+FROM sebasguts/gapbinder:20180132
 
 MAINTAINER Manuel Martins <manuelmachadomartins@gmail.com>
 
